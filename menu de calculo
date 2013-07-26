@@ -1,0 +1,78 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+float area_triangulo(int base, int altura);
+float area_cuadrado(int lado);
+float area_circunferencia(float radio);
+int main()
+{
+  int opcion;
+	int a, b;
+	int bandera;
+	float area;
+	do
+	{
+		
+
+		printf("\n MENU\n\t");
+		printf(" \n 1. Area del triangulo\n ");
+		printf(" \n 2. Area del cuadrado\n ");
+		printf(" \n 3. Area del circunferencia\n ");
+		printf(" \n 0. salir\n\n ");
+		printf(" OPCION: \n\n \t");
+		scanf("%d", &opcion);
+		switch(opcion)
+		{
+		case 1:
+			printf("Ingrese la base:\n");
+			scanf("%d",&b);
+			printf("Ingrese la altura:\n");
+			scanf("%d",&a);
+			area=area_triangulo(b,a);
+			printf("\nArea del triangulo es: %f", area);
+			getch();
+			break;
+		case 2:
+			printf("Ingrese la lado: \n");
+			scanf("%d",&a);
+			area=area_cuadrado(a);
+			printf("\nArea del cuadrado es: %f", area);
+			getch();
+			break;
+		case 3:
+			printf("Ingrese el radio: \n");
+			scanf("%d",&a);
+			area=area_circunferencia(a);
+			printf("\nArea de la circunferencia es: %f", area);
+			getch();
+			break;
+		case 0:
+			bandera=1;
+			break;
+		default:
+			printf("\n Opcion no valida\n");
+		}
+
+	}
+	while(opcion!=0);
+	getch();
+	return(0);
+}
+float area_triangulo(int base, int altura)
+{
+	float area=(base*altura);
+	return(area);
+}
+
+float area_cuadrado(int lado)
+{
+	float area=lado*lado;
+	return(area);
+}
+float area_circunferencia(float radio)
+{
+	float Pi=3.141516, area;
+	area=Pi*radio*radio;
+	return(area);
+}

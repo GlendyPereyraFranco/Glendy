@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include "stdio.h"
+//Funcion
+int factorial(int numero)
+{
+  if(numero<2)
+    return 1;
+  else
+    return numero * factorial(numero-1);
+}
+
+//Programa principal
+
+int main()
+{
+  int num=0;
+  
+  printf("::CALCULAR FACTORIAL::\n");
+  printf("Introduce un numero: ");scanf("%i",&num);       
+  printf("\tEl resultado es: %i\n", factorial(num));       
+  
+  return 0;
+}

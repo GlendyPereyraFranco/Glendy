@@ -1,0 +1,46 @@
+// binario y octal.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+
+ 
+void main()
+{
+    int base, suma, numero, opcion, resto, i, k;
+    base = 1;
+    suma = 0;
+    printf("INGRESE LA OPCION DE CONVERSION QUE QUIERE REALIZAR:\n\t");
+    printf("1.-Convertir Decimal a Binario\n\t");
+		printf("2.-Convertir Decimal a Octal\n\t");
+     
+    scanf("\n%d\n\t", &opcion);
+    printf("Ingresa un numero:\n\t");
+    scanf("%d", &numero);
+    switch (opcion)
+    {
+        case 1:
+            while(numero >= 1)
+            {//inicio while binarios
+                resto = numero % 2;
+                numero = numero / 2;
+                suma = suma + resto * base;
+                base = base * 10;
+            }//fin while (binarios)
+            printf("El numero binario es:\t%d\n", suma);
+            break;
+        case 2:
+            do
+            {//inicio while octales
+                resto = numero % 8;
+                numero = numero / 8;
+                suma = suma + resto * base;
+                base = base * 10;
+ 
+            } while(numero > 0);//fin while (octales)
+            printf("El numero octal es:\t%d\n", suma);
+            break;
+    
+    }
+	getch();
+}

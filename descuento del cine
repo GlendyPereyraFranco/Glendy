@@ -1,0 +1,76 @@
+//Descripcion :calcular las ganancias de un cine deja de percibir por descuentos segun las tabla:
+
+// 5 a 14 años : 35% descuento.
+// 15 a 19 años : 25% descuento.
+// 20 a 45 años : 10% descuento.
+// 40 a 65 años : 25% descuento.
+// 66 en adelante : 35% descuento.
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main()
+{ float precio,total1,total2,total3,total4,total5,total6;
+  int n, i ,edadcliente;
+  float descuento1=0;
+  float descuento2=0;
+  float descuento3=0;
+  float descuento4=0;
+  float descuento5=0;
+  i=0;
+  printf("\n TEATRO\n");
+  printf("\n\ningrese la cantidad de clientes\n");
+  scanf("%d",&n);
+  printf("\ningrese el precio de la entrada\n");
+  scanf("%f",&precio);
+  while(n!=i)
+  { printf("\ningrese la edad del cliente\n");
+      scanf("%d", &edadcliente);
+      if(edadcliente>= 5 && edadcliente<= 14)
+     {total1=precio*0.35;
+      descuento1=descuento1+total1;
+     }
+else
+{
+if(edadcliente>=15 && edadcliente <=19)
+{total2=precio*0.25;
+          descuento2=descuento2+total2;
+}
+else
+{ if (edadcliente >=20 && edadcliente <= 45)
+{ total3=precio*0.10;
+descuento3=descuento3+total3;
+}
+else
+{ if(edadcliente >=46 && edadcliente<=65)
+{total4=precio*0.25;
+descuento4=descuento4+total4;
+}
+else
+{if(edadcliente >=66 && edadcliente <= 100)
+{total5= precio*0.35;
+descuento5=descuento5+total5;
+}
+else
+printf(" no pagan por ser mayor a 100 años ");
+}
+}
+}
+}
+i=i+1;
+  }
+  total6=acumulador1+acumulador2+acumulador3+acumulador4+acumulador5;
+  printf("\n\nel teatro con la categoria 1 pierde: %f Bs.", descuento1);
+  printf("\n\nel teatro con la categoria 2 pierde: %f Bs.", descuento2);
+  printf("\n\nel teatro con la categoria 3 pierde: %f Bs.", descuento3);
+  printf("\n\nel teatro con la categoria 4 pierde: %f Bs.", descuento4);
+  printf("\n\nel teatro con la categoria 5 pierde: %f Bs.", descuento5);
+  printf("\n\n===========================================\n");
+  printf("\nEl teatro registra una perdida todal de: %f Bs. ", total6);
+               getch();
+}
+
+    
+

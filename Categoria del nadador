@@ -1,0 +1,51 @@
+// nadador.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main()
+{
+  int edad;
+  printf("introduzca la edad del nadador para determinar su categoria:");
+	scanf("%d", &edad);
+	if(edad>5 && edad<7)
+  	{
+	  	printf("EL NADADOR ES CATEGORIA INFANTIL A");
+	  }
+	  else
+	  {
+		  if(edad>7 && edad<10)
+		  {
+        printf("EL NADADOR ES CATEGORIA INFANTIL B");
+		  }
+		 else
+		  {
+			  if(edad>10 && edad<14)
+		  	{
+          printf("EL NADADOR ES CATEGORIA JUVENIL A");
+			  }
+			  else
+			  {
+				  if(edad>13 && edad<18)
+				  {
+            printf("EL NADADOR ES CATEGORIA B");
+				  }
+				  else
+				  {
+					  if(edad>17 && edad<61)
+					  {
+              printf("EL NADADOR ES CATEGORIA ADULTO");
+					  }
+					  else
+					  {
+              printf("EL NADADOR ES CATEGORIA SEÑOR");
+					  }
+				  }
+			  }
+		  }
+	  }
+	getch();
+}

@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+void main(void)
+{
+  int inicio,fin,suma;
+  int i;
+
+printf("Introducir el numero de inicio del rango \n");
+scanf("%d",&inicio);
+printf("Introducir el numero de fin del rango\n");
+scanf("%d",&fin);
+
+
+i=inicio;
+suma=0;
+
+while((i<=fin) )
+{
+	printf("%d\n",i);
+suma=suma+i;
+	i=i+2;
+
+}
+
+printf("la suma es:%d \n",suma);
+
+	getch();
+}

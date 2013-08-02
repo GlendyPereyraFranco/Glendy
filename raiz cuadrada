@@ -1,0 +1,21 @@
+// raiz cuadrada.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+main()
+{
+  
+  int numero, resultado;
+	printf("\nINGRESE DEL NUMERO A CALCULAR\n\t");
+	scanf("%d", &numero);
+
+
+	resultado=sqrt(numero);
+	printf("LA RAIZ CUADRADA ES : %d", resultado);
+
+	getch();
+
+}

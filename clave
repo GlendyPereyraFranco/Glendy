@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main(void)
+{
+  int clave;
+  int intento;
+
+  printf("Inteno de clave \n");
+
+  intento=1;
+  do{
+
+	  printf("Introduzca  el numero de clave secreta: \n");
+	  scanf("%d",&clave);
+
+    if(clave!=1419914)
+      {
+	      intento=intento+1;
+	      intento=intento;
+      }
+
+    else
+    {
+	      printf("clave correcta\n");
+        intento=4;
+
+    }	
+
+    }while((intento<=3) );		
+	 getch();
+}

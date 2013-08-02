@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main(void)
+{ 
+  int numero;
+  int contador;
+  int acumulador;
+
+  printf("introduzca numero entero positivo: \n");
+  scanf("%d",&numero);
+
+  contador=1;
+  acumulador=0;
+  while(contador<=numero)
+
+  {
+    acumulador=acumulador+numero;
+	  contador=contador+1;
+  }
+
+
+  printf("resultado es:%d\n",acumulador);
+  getch();
+}
+

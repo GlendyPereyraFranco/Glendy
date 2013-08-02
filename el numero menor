@@ -1,0 +1,30 @@
+// numero menor.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+
+int main()
+{
+  int cant_n, i, numero, mayor, menor_NUMERO;
+  printf("\nPOR FAVOR..! INGRESE LA CANTIDAD DE NUMEROS QUE VA A NGRESAR:\n\n");
+	scanf("%d", &cant_n);
+	menor_NUMERO=999;//LIMITE
+	for (i = 1; i <= cant_n; i++)
+	{
+		printf("\nINGRESE LOS NUMERO MENOR A 1000:\t");
+		scanf("%d", &numero);
+		if (numero < menor_NUMERO)
+		  {
+		  	menor_NUMERO = numero;
+		  }
+	}
+
+		printf("\nEL NUMERO MENOR ES=\t%d", menor_NUMERO);
+	  getch();
+		return 0;
+
+}
